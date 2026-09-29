@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+
+# Nix build results
+result
+result-*
+
+# Editor files
+*.swp
+*.swo
+*~
