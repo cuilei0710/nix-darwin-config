@@ -26,6 +26,8 @@ in
     nixd
     nixfmt
 
+    gh
+
     # Use unstable packages explicitly when needed.
     unstable.mole-cleaner
   ];
