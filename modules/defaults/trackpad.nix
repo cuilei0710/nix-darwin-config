@@ -1,3 +1,5 @@
+{ ... }:
+
 {
   system.defaults.trackpad = {
     # Enable three-finger drag.

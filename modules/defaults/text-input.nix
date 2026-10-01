@@ -1,3 +1,5 @@
+{ ... }:
+
 {
   system.defaults.NSGlobalDomain = {
     # Disable automatic capitalization.

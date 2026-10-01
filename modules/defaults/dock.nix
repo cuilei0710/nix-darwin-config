@@ -1,3 +1,5 @@
+{ ... }:
+
 {
   system.defaults.dock = {
     # Automatically hide and show the Dock.
