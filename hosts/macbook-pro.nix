@@ -1,7 +1,10 @@
 { ... }:
 
 {
-  # Set the platform where the configuration will run.
+  # Set the device name.
+  _module.args.deviceName = "MacBook Pro";
+
+  # Set the platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
 
   # Set the user-friendly computer name.

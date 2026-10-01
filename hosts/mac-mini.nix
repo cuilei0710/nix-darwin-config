@@ -1,6 +1,9 @@
 { ... }:
 
 {
+  # Set the device name.
+  _module.args.deviceName = "Mac mini";
+
   # Set the platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
 

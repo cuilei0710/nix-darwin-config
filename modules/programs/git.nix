@@ -1,4 +1,4 @@
-{ ... }:
+{ deviceName, ... }:
 
 {
   programs.git = {
@@ -8,7 +8,7 @@
     settings = {
       # Set the Git author identity.
       user = {
-        name = "Penelope Liones";
+        name = "Penelope Liones (${deviceName})";
         email = "cuilei0710@qq.com";
       };
 
