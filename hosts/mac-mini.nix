@@ -1,8 +1,13 @@
 { ... }:
 
+let
+  deviceName = "Mac mini";
+in
 {
-  # Set the device name.
-  _module.args.deviceName = "Mac mini";
+  # Pass the device name to Home Manager modules.
+  home-manager.extraSpecialArgs = {
+    inherit deviceName;
+  };
 
   # Set the platform the configuration will be used on.
   nixpkgs.hostPlatform = "aarch64-darwin";
