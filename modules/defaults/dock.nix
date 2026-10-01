@@ -6,7 +6,7 @@
     # Minimize windows into their application icon.
     minimize-to-application = true;
 
-    # Don't show recent applications in the Dock.
+    # Hide recent applications in the Dock.
     show-recents = false;
   };
 }

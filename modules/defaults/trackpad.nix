@@ -3,18 +3,18 @@
     # Enable three-finger drag.
     TrackpadThreeFingerDrag = true;
 
-    # Use four fingers to switch between Spaces and full-screen apps.
+    # Enable four-finger swiping between full-screen applications.
     TrackpadFourFingerHorizSwipeGesture = 2;
 
-    # Use four fingers for Mission Control and App Exposé.
+    # Enable four-finger vertical swipe gestures.
     TrackpadFourFingerVertSwipeGesture = 2;
   };
 
   system.defaults.dock = {
-    # Enable Mission Control gestures.
+    # Enable the Mission Control trackpad gesture.
     showMissionControlGestureEnabled = true;
 
-    # Enable App Exposé gestures.
+    # Enable the App Exposé trackpad gesture.
     showAppExposeGestureEnabled = true;
   };
 }

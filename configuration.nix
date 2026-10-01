@@ -1,17 +1,17 @@
 { pkgs, inputs, ... }:
 
 {
-  # The primary user of the system.
+  # Set the primary user for user-specific system options.
   system.primaryUser = "leo";
 
-  # Define the user's home directory.
+  # Set the user's home directory.
   users.users.leo.home = "/Users/leo";
 
   # Allow unfree packages.
   nixpkgs.config.allowUnfree = true;
 
   nix = {
-    # Use the stable Lix package set as the system Nix implementation.
+    # Use the stable Lix package set.
     package = pkgs.lixPackageSets.stable.lix;
 
     # Enable the Nix command and flakes.
@@ -27,10 +27,9 @@
     optimise.automatic = true;
   };
 
-  # Set Git commit hash for darwin-version.
+  # Set the configuration revision from the top-level flake.
   system.configurationRevision = inputs.self.rev or inputs.self.dirtyRev or null;
 
-  # Used for backwards compatibility, please read the changelog before changing.
-  # $ darwin-rebuild changelog
+  # Set the nix-darwin state version.
   system.stateVersion = 6;
 }
