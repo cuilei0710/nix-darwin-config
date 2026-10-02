@@ -3,7 +3,7 @@ result
 result-*
 
 # Editor directories and files
-.zed/*
+.zed
 .DS_Store
 Thumbs.db
 *.suo
