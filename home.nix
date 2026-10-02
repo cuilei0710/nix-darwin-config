@@ -1,14 +1,5 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
-let
-  # Use Nixpkgs unstable for selected packages.
-  unstable = import inputs.nixpkgs-unstable {
-    inherit (pkgs.stdenv.hostPlatform) system;
-
-    # Allow unfree packages from Nixpkgs unstable.
-    config.allowUnfree = true;
-  };
-in
 {
 
   imports = [

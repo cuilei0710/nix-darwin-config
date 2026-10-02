@@ -7,8 +7,21 @@
   # Set the user's home directory.
   users.users.leo.home = "/Users/leo";
 
-  # Allow unfree packages.
-  nixpkgs.config.allowUnfree = true;
+  # Configure system-wide Nixpkgs.
+  nixpkgs = {
+    # Allow unfree packages.
+    config.allowUnfree = true;
+
+    overlays = [
+      (final: _prev: {
+        # Make Nixpkgs unstable available as pkgs.unstable.
+        unstable = import inputs.nixpkgs-unstable {
+          inherit (final.stdenv.hostPlatform) system;
+          inherit (final) config;
+        };
+      })
+    ];
+  };
 
   nix = {
     # Use the stable Lix package set.
