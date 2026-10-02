@@ -1,12 +1,13 @@
-# macOS
-.DS_Store
-
 # Nix build results
 result
 result-*
 
-# Editor files
-*.swp
-*.swo
-*~
-.zed
+# Editor directories and files
+.zed/*
+.DS_Store
+Thumbs.db
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
