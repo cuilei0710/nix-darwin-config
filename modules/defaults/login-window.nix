@@ -2,7 +2,7 @@
 
 {
   system.defaults.loginwindow = {
-    # Disable the Guest User account.
+    # Do not offer a Guest User login.
     GuestEnabled = false;
   };
 }

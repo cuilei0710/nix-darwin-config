@@ -2,16 +2,14 @@
 
 {
   home-manager = {
-    # Use the system configuration's pkgs argument.
+    # Use the same package set and profile as the system configuration.
     useGlobalPkgs = true;
-
-    # Install user packages through the system user profile.
     useUserPackages = true;
 
-    # Pass flake inputs to Home Manager modules.
+    # Pass flake inputs to user modules that need them.
     extraSpecialArgs = { inherit inputs; };
 
-    # Configure the Home Manager user.
+    # Load the configuration for the primary user.
     users.leo = ../home.nix;
   };
 }

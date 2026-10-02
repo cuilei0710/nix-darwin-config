@@ -2,7 +2,7 @@
 
 {
   system.defaults.WindowManager = {
-    # Enable holding Option to tile windows.
+    # Hold Option while dragging a window to use macOS tiling.
     EnableTilingOptionAccelerator = true;
   };
 }

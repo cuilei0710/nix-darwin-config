@@ -2,21 +2,21 @@
 
 {
   programs.git = {
-    # Enable Git.
+    # Manage Git and its user configuration through Home Manager.
     enable = true;
 
     settings = {
-      # Set the Git author identity.
-      user = {
-        name = "Penelope Liones (${deviceName})";
-        email = "cuilei0710@qq.com";
-      };
+      # Convert CRLF to LF on commit and leave checkout files unchanged.
+      core.autocrlf = "input";
 
-      # Use main as the default branch name.
+      # Name new repositories' first branch main.
       init.defaultBranch = "main";
 
-      # Convert CRLF to LF when committing.
-      core.autocrlf = "input";
+      # Identify commits by the machine that created them.
+      user = {
+        email = "cuilei0710@qq.com";
+        name = "Penelope Liones (${deviceName})";
+      };
     };
   };
 }

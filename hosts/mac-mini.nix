@@ -4,17 +4,14 @@ let
   deviceName = "Mac mini";
 in
 {
-  # Pass the device name to Home Manager modules.
+  # Show this name in macOS sharing and system settings.
+  networking.computerName = "Lei's Mac mini";
+
+  # Use this hostname on the local network.
+  networking.hostName = "Leis-Mac-mini";
+
+  # Include the device name in the Git author identity.
   home-manager.extraSpecialArgs = {
     inherit deviceName;
   };
-
-  # Set the platform the configuration will be used on.
-  nixpkgs.hostPlatform = "aarch64-darwin";
-
-  # Set the user-friendly computer name.
-  networking.computerName = "Lei's Mac mini";
-
-  # Set the system hostname.
-  networking.hostName = "Leis-Mac-mini";
 }

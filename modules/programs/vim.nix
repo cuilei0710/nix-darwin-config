@@ -2,10 +2,10 @@
 
 {
   programs.vim = {
-    # Enable Vim.
+    # Install Vim through Home Manager.
     enable = true;
 
-    # Use the standard Vim package.
+    # Use the standard configurable Vim package.
     packageConfigurable = pkgs.vim;
   };
 }

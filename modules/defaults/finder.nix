@@ -2,10 +2,10 @@
 
 {
   system.defaults.finder = {
-    # Search the current folder by default.
+    # Start Finder searches in the current folder.
     FXDefaultSearchScope = "SCcf";
 
-    # Keep folders on top when sorting by name.
+    # Show folders before files when sorting by name.
     _FXSortFoldersFirst = true;
   };
 }

@@ -1,26 +1,24 @@
 { pkgs, ... }:
 
 {
-
+  # Load the user programs managed by Home Manager.
   imports = [
     ./modules/programs/git.nix
-    ./modules/programs/zsh.nix
     ./modules/programs/vim.nix
+    ./modules/programs/zsh.nix
   ];
 
-  # This value determines the Home Manager release that the configuration
-  # is compatible with. You can update Home Manager without changing it.
-  home.stateVersion = "26.05";
-
-  # Packages installed in the user profile.
+  # Install these tools in the user's profile on both Macs.
   home.packages = with pkgs; [
+    gh
     nixd
     nixfmt
 
-    gh
-
-    # Use unstable packages explicitly when needed.
+    # Select this package from unstable; the others use the stable release.
     unstable.mole-cleaner
   ];
 
+  # Keep this at the Home Manager release used for the initial setup.
+  # Changing it can alter compatibility defaults; it does not upgrade packages.
+  home.stateVersion = "26.05";
 }
