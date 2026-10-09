@@ -38,6 +38,9 @@
       "flakes"
     ];
 
+    # Register unstable using the existing flake input.
+    registry.nixpkgs-unstable.flake = inputs.nixpkgs-unstable;
+
     # Manage package sources through flake inputs instead of channels.
     channel.enable = false;
 
