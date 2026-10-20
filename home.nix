@@ -13,6 +13,7 @@
     gh
     nixd
     nixfmt
+    git-annex
 
     # Select this package from unstable; the others use the stable release.
     unstable.mole-cleaner
