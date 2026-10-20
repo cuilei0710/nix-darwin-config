@@ -5,6 +5,7 @@
   imports = [
     ./modules/programs/git.nix
     ./modules/programs/vim.nix
+    ./modules/programs/zed-editor.nix
     ./modules/programs/zsh.nix
   ];
 
